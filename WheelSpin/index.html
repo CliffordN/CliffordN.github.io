@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="https://cliffordn.github.io/WheelSpin/main.css" type="text/css" />
         <script type="text/javascript" src="https://cliffordn.github.io/WheelSpin/Winwheel.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-		<script src="https://telegram.org/js/games.js"></script>
+		
     </head>
     <body>
         <div align="center">
@@ -38,10 +38,8 @@
         	<br />
             <p>Choose a power setting then press the Spin button. You will be alerted to the prize won when the spinning stops.</p>
             <br />
-            <table cellpadding="0" cellspacing="0" border="0">
-                <tr>
-                    <td>
-                        <div class="power_controls">
+			<button onclick="TelegramGameProxy.shareScore()">Share score</button>
+			<div class="power_controls">
                             <br />
                             <br />
                             <table class="power" cellpadding="10" cellspacing="0">
@@ -61,10 +59,14 @@
                             <br />
                             <img id="spin_button" src="spin_off.png" alt="Spin" onClick="startSpin();" />
                         </div>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        
                     </td>
-                    <td width="438" height="582" class="the_wheel" align="center" valign="center">
+                    <td width="438" height="582" class="the_wheel" align="l" valign="center">
                         <canvas id="canvas" width="434" height="434">
-                            <p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try another.</p>
+                            <p style="{color: white}" align="left">Sorry, your browser doesn't support canvas. Please try another.</p>
                         </canvas>
                     </td>
                 </tr>
@@ -227,5 +229,6 @@
                 }
             }
         </script>
+		<script src="https://telegram.org/js/games.js"></script>
     </body>
 </html>
